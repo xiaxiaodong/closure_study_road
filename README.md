@@ -72,7 +72,7 @@
         }
         goog.events.listen(zippy, goog.ui.Zippy.Events.TOGGLE, react);
         
-#
+#写累了,如果之后再看api的话,就继续写
 
 
 
