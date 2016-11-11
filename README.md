@@ -76,7 +76,8 @@
 
 #Google Closure Library  项目构建说明
     
-    建议观看官网完整教程 https://developers.google.com/closure/library/
+建议观看官网完整教程 [closure library]:https://developers.google.com/closure/library/
+出bug了查看这个网页 [closure compiler]: https://developers.google.com/closure/compiler/docs/api-tutorial3
 
 ##命令行
     路径在git下载的最顶层目录,与Closure Library项目文件夹同级
@@ -112,7 +113,7 @@
                     WHITESPACE_ONLY         仅仅去掉空格和换行  --未测试过,发现于百度文库的中文文档
                     SIMPLE_OPTIMIZATIONS    只是简单压缩
                     ADVANCED_OPTIMIZATIONS  更进一步的压缩,如果函数未被使用,会被删除掉  
-                                            出bug了查看这个网页 [closure]: https://developers.google.com/closure/compiler/docs/api-tutorial3
+                                            
             >  输出的脚本路径和名称
     
     若写成bat文件需要写成单行
