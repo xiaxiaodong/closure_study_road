@@ -1,0 +1,2 @@
+python closure-library/closure/bin/build/closurebuilder.py  --root=closure-library/  --root=myproject/  --namespace="myproject.start"  --output_mode=compiled  --compiler_jar=compiler.jar --compiler_flags="--js=deps.js" --compiler_flags="--compilation_level=ADVANCED_OPTIMIZATIONS"  > myproject/myproject.js
+pause
