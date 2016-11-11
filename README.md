@@ -1,7 +1,13 @@
 ﻿#Google Closure 学习笔记
     
-    意外找到一份中文文档 http://wenku.baidu.com/view/cd5299402f60ddccda38a062.html?re=view
-    
+意外找到一份中文文档 [百度文档]:http://wenku.baidu.com/view/cd5299402f60ddccda38a062.html?re=view
+
+<code>
+    tutorial = tutorial || {};
+    tutorial.notepad = tutorial.notepad || {};
+    tutorial.notepad.Note = tutorial.notepad.Note || {};
+</code>
+
 ##命名空间 Namespace
     
     goog.provide()  
@@ -75,8 +81,9 @@
 
 
 #Google Closure Library  项目构建说明
-    
+
 建议观看官网完整教程 [closure library]:https://developers.google.com/closure/library/
+
 出bug了查看这个网页 [closure compiler]: https://developers.google.com/closure/compiler/docs/api-tutorial3
 
 ##命令行
@@ -130,14 +137,11 @@
         
     
     借助 depswriter.py 这个脚本,来创建自己的命名空间
-        <pre><code>
-
-
+        
         losure-library/closure/bin/build/depswriter.py  \
             --root=closure-library/ \
             --root=myproject/ \
             --output_file='deps.js'
-            </code></pre>
         执行脚本后,会在当前路径下生产新的deps.js
     
     若写成bat文件需要写成单行
