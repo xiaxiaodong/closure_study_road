@@ -1,8 +1,5 @@
 ﻿#Google Closure 学习笔记
     
-意外找到一份中文文档,我没细读,构建部分应该差不多 http://wenku.baidu.com/view/cd5299402f60ddccda38a062.html?re=view
-
-
 ##命名空间 Namespace
     
     goog.provide()  
@@ -81,6 +78,8 @@
 建议观看官网完整教程 https://developers.google.com/closure/library/
 
 出bug了查看这个网页  https://developers.google.com/closure/compiler/docs/api-tutorial3
+意外找到一份中文文档,我没细读,构建部分应该差不多 http://wenku.baidu.com/view/cd5299402f60ddccda38a062.html?re=view
+
 
 ##命令行
     路径在git下载的最顶层目录,与Closure Library项目文件夹同级
