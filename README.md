@@ -2,11 +2,6 @@
     
 意外找到一份中文文档 [百度文档]:http://wenku.baidu.com/view/cd5299402f60ddccda38a062.html?re=view
 
-<code>
-    tutorial = tutorial || {};
-    tutorial.notepad = tutorial.notepad || {};
-    tutorial.notepad.Note = tutorial.notepad.Note || {};
-</code>
 
 ##命名空间 Namespace
     
@@ -52,9 +47,9 @@
         这个库的构建思想和代码编写不得不说是很棒的,代码生成后很舒坦,压缩也很彻底
         但不得不说,这个库的组件没有区分基础和插件,对学习造成了不少的困难,没有中文文档
     
-    官网api地址 https://google.github.io/closure-library/api/
-    官网demo地址 https://google.github.io/closure-library/source/closure/goog/demos/
-    
+[官网api地址] https://google.github.io/closure-library/api/
+{官网demo地址} https://google.github.io/closure-library/source/closure/goog/demos/
+
 ##事件 Events
     
     可以监听dom,也可以监听组件
