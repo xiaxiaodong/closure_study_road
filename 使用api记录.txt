@@ -1,0 +1,3 @@
+﻿页面滚动到位置
+    goog.global.scrollTo(0, 0);
+    

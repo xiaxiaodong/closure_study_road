@@ -47,27 +47,6 @@
 官网api地址 https://google.github.io/closure-library/api/
 
 官网demo地址 https://google.github.io/closure-library/source/closure/goog/demos/
-
-##事件 Events
-    
-    可以监听dom,也可以监听组件
-    
-    goog.events.listen( dom 或 组件实例 , 事件类型,
-            处理函数, false, this);
-    
-    监听DOM demo:
-        goog.events.listen(this.elHeader_, goog.events.EventType.CLICK,
-            this.onHeaderClick_, false, this);
-            
-    监听组件 demo:
-        var zippyHeader = document.getElementById('header');
-        var zippyContent = document.getElementById('content');
-        var zippy = new goog.ui.Zippy(zippyHeader, zippyContent);
-
-        function react(e) {
-            alert('The Zippy opened!');
-        }
-        goog.events.listen(zippy, goog.ui.Zippy.Events.TOGGLE, react);
         
 #写累了,如果之后再看api的话,就继续写
 
@@ -141,4 +120,63 @@
     
     若写成bat文件需要写成单行
             python closure-library/closure/bin/build/depswriter.py   --root=closure-library/ --root=myproject/ --output_file=deps.js
+
+
+##事件 Events
     
+    可以监听dom,也可以监听组件
+    
+    goog.events.listen( dom 或 组件实例 , 事件类型,
+            处理函数, false, this);
+    
+    监听DOM demo:
+        goog.events.listen(this.elHeader_, goog.events.EventType.CLICK,
+            this.onHeaderClick_, false, this);
+            
+    监听组件 demo:
+        var zippyHeader = document.getElementById('header');
+        var zippyContent = document.getElementById('content');
+        var zippy = new goog.ui.Zippy(zippyHeader, zippyContent);
+
+        function react(e) {
+            alert('The Zippy opened!');
+        }
+        goog.events.listen(zippy, goog.ui.Zippy.Events.TOGGLE, react);
+
+            
+##网络请求 demo
+
+    这里我列出一些使用到的demo,方便以后查找使用
+    具体的api最好是看源码,由于线上使用的库是旧版本的,demo用的api也是滞后于新版本的.
+    使用时可能还需要你们实际测试一下.
+    
+    xhr
+        goog.require('goog.events');
+        goog.require('goog.net.EventType');
+        goog.require('goog.net.XhrIo');
+        
+        var xhrIo = new goog.net.XhrIo();
+        
+        goog.events.listen(xhrIo, goog.net.EventType.SUCCESS, function(e,a){
+            var xhr = e.target.xhr_;
+            console.log(e.target.getResponseJson());
+            console.log(e.target.getResponseText());
+        });
+        
+        xhrIo.send(
+            '/users',
+            "post",
+            'type=like'
+        );
+        
+    jsonp
+        goog.require('goog.net.Jsonp'); 
+    
+        var jsonp = new goog.net.Jsonp('/users');
+        
+        var userCallback = function(data) {
+            console.log(JSON.stringify(data,null,2));
+        }
+        var payload = {atisket: 'atasket', basket: 'yellow'};
+        jsonp.send(payload, userCallback, undefined, 'haha');
+        
